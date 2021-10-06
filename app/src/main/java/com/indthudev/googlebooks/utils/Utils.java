@@ -1,0 +1,18 @@
+package com.indthudev.googlebooks.utils;
+
+import java.util.List;
+
+public class Utils {
+
+    public String StringJoin(List<String> stringList, String delimeter) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < stringList.size(); i++) {
+            sb.append(stringList.get(i));
+            if (i != stringList.size() - 1) {
+                sb.append(delimeter);
+            }
+        }
+
+        return sb.toString();
+    }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navGraph"
+    app:startDestination="@id/bookSearchFragment">
+
+    <fragment
+        android:id="@+id/bookSearchFragment"
+        android:name="com.indthudev.googlebooks.fragment.BookSearchFragment"
+        android:label="fragment_booksearch"
+        tools:layout="@layout/fragment_booksearch" >
+        <action
+            android:id="@+id/action_bookSearchFragment_to_bookDetailFragment4"
+            app:destination="@id/bookDetailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookDetailFragment"
+        android:name="com.indthudev.googlebooks.fragment.BookDetailFragment"
+        android:label="BookDetailFragment" />
+</navigation>
